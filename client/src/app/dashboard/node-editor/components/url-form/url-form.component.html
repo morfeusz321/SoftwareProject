@@ -1,0 +1,11 @@
+<form [formGroup]="urlForm">
+  <div style="display: flex; flex-direction: column">
+    <mat-card>
+      <mat-form-field appearance="fill">
+        <mat-label>{{urlFormText + 'endpointURL' | transloco}}</mat-label>
+        <input required matInput formControlName="url">
+      </mat-form-field>
+    </mat-card>
+  </div>
+  <!-- {{this.urlForm.value | json}} -->
+</form>

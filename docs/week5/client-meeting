@@ -1,0 +1,15 @@
+# Client Meeting: 2023-05-26
+
+## Features shown in demo:
+- new node visuals
+- node edge removal
+- filter node, using json placeholder list of post objects
+- argument demonstration
+    - execution
+    - setting and removing in node edit view
+- transloco functionality for dutch language version
+
+## Client feedbac
+- happy with our progress
+- good pace
+- had some discussion to clarify how arguments can be used in practice in an example scenario. all clear now.

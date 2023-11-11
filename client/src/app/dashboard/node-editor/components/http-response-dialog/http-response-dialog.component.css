@@ -1,0 +1,6 @@
+.response-container {
+  overflow: auto;
+  width: 800px;
+  height: 600px;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,44 @@
+<form [formGroup]="inviteForm">
+  <div style="display: flex; flex-direction: column">
+    <mat-form-field appearance="fill">
+      <mat-label>Select Survey</mat-label>
+      <mat-select required formControlName="surveyId" [compareWith]="compareSurveys">
+        <mat-option *ngFor="let survey of surveys" [value]="survey.id">
+          {{survey.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select email template</mat-label>
+      <mat-select required formControlName="template">
+        <mat-option *ngFor="let template of inviteConfig?.templates" [value]="template.id">
+          {{template.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select subject</mat-label>
+      <mat-select required formControlName="subject">
+        <mat-option *ngFor="let subject of inviteConfig?.subjects" [value]="subject">
+          {{subject}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select sender email</mat-label>
+      <mat-select required formControlName="fromEmail">
+        <mat-option *ngFor="let sender of inviteConfig?.senderAddresses" [value]="sender">
+          {{sender}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select sender name</mat-label>
+      <mat-select required formControlName="fromName">
+        <mat-option *ngFor="let name of inviteConfig?.senderNames" [value]="name">
+          {{name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>

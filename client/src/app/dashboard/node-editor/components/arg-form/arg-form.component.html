@@ -1,0 +1,32 @@
+<form [formGroup]="argForm">
+  <div formArrayName="arguments" class="arguments">
+    <div *ngFor="let arg of arguments().controls; let argIndex=index">
+      <div
+        [formGroupName]="argIndex"
+        style="display: flex; flex-direction: column"
+        class ="argument">
+        <mat-card class="argument-card">
+          <mat-form-field appearance="fill">
+            <mat-label>{{argFormText + 'node' | transloco}}</mat-label>
+            <mat-select required formControlName="parentId" (click)="filterNodes()">
+              <mat-option *ngFor="let node of nodesWithoutSelectedNode" [value]="node.id" (mouseenter)="highlightNode(node.id)" (mouseleave)="clearHighlighted()">
+                {{node.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>{{argFormText + 'field' | transloco}}</mat-label>
+            <input required matInput formControlName="field">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>{{argFormText + 'alias' | transloco}}</mat-label>
+            <input required matInput formControlName="alias">
+          </mat-form-field>
+          <button (click)="removeArgument(argIndex)" class="remove-argument" mat-fab color="warn"><mat-icon>delete</mat-icon></button>
+        </mat-card>
+      </div>
+    </div>
+    <button type="button" (click)="addArgument()" mat-fab color="accent"><mat-icon>add</mat-icon></button>
+  </div>
+  <!--{{this.argForm.value | json}} -->
+</form>

@@ -1,0 +1,122 @@
+{
+  "id": 1,
+  "name": "Example Graph With Only Actions",
+  "user": {
+    "id": 1
+  },
+  "nodes": [
+    {
+      "request": {
+        "id": 1,
+        "body": "",
+        "url": "https://jsonplaceholder.typicode.com/todos/1",
+        "method": "GET",
+        "auth": null
+      },
+      "arguments": [],
+      "id": "00000000-0000-4000-8000-000000000001",
+      "type": null,
+      "position": {
+        "positionX": 0,
+        "positionY": 0,
+        "positionZ": 0
+      },
+      "neighbours": [
+        "00000000-0000-4000-8000-000000000002",
+        "00000000-0000-4000-8000-000000000003"
+      ]
+    },
+    {
+      "request": {
+        "id": 2,
+        "body": "",
+        "url": "https://jsonplaceholder.typicode.com/todos/1",
+        "method": "GET",
+        "auth": null
+      },
+      "arguments": [],
+      "id": "00000000-0000-4000-8000-000000000002",
+      "type": null,
+      "position": {
+        "positionX": 0,
+        "positionY": 0,
+        "positionZ": 0
+      },
+      "neighbours": [
+        "00000000-0000-4000-8000-000000000004"
+      ]
+    },
+    {
+      "request": {
+        "id": 3,
+        "body": "",
+        "url": "https://jsonplaceholder.typicode.com/todos/1",
+        "method": "GET",
+        "auth": null
+      },
+      "arguments": [],
+      "id": "00000000-0000-4000-8000-000000000003",
+      "type": null,
+      "position": {
+        "positionX": 0,
+        "positionY": 0,
+        "positionZ": 0
+      },
+      "neighbours": [
+        "00000000-0000-4000-8000-000000000004",
+        "00000000-0000-4000-8000-000000000005"
+      ]
+    },
+    {
+      "request": {
+        "id": 4,
+        "body": "",
+        "url": "https://jsonplaceholder.typicode.com/todos/1",
+        "method": "GET",
+        "auth": null
+      },
+      "arguments": [],
+      "id": "00000000-0000-4000-8000-000000000004",
+      "type": null,
+      "position": {
+        "positionX": 0,
+        "positionY": 0,
+        "positionZ": 0
+      },
+      "neighbours": []
+    },
+    {
+      "request": {
+        "id": 5,
+        "body": "",
+        "url": "https://jsonplaceholder.typicode.com/todos/1",
+        "method": "GET",
+        "auth": null
+      },
+      "arguments": [],
+      "id": "00000000-0000-4000-8000-000000000005",
+      "type": null,
+      "position": {
+        "positionX": 0,
+        "positionY": 0,
+        "positionZ": 0
+      },
+      "neighbours": []
+    },
+    {
+      "schedule": "*/2 * * * *",
+      "id": "00000000-0000-4000-8000-000000000006",
+      "type": "TRIGGER",
+      "position": {
+        "positionX": 0,
+        "positionY": 0,
+        "positionZ": 0
+      },
+      "neighbours": [
+        "00000000-0000-4000-8000-000000000001"
+      ]
+    }
+  ],
+  "isActive": true,
+  "isDraft": false
+}

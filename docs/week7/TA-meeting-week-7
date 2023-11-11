@@ -1,0 +1,128 @@
+1. Daily tasks [https://www.notion.so/Daily-Tasks-3f923b442836413c9edd730df3d02b14?pvs=4](https://www.notion.so/Daily-Tasks-3f923b442836413c9edd730df3d02b14?pvs=21)
+2. Sprint retrospective [https://www.notion.so/Week-6-4359320eb407461eaadf58bef63f949a?pvs=4](https://www.notion.so/Week-6-4359320eb407461eaadf58bef63f949a?pvs=21)
+3. Discuss the results of usability tests and what do we agree to improve.
+
+Users were put into complete black box scenario. After short instructions they improved a lot.
+
+Results:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16398bbd-e7f5-49af-97ae-8d6006c10694/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e70cd794-c318-4c8c-95f4-7bce9ddea6b8/Untitled.png)
+
+1. Trigger node:
+    1. It is not clear that it is also a start node - rename it, and preferably put it in the graph by default.
+2. Adding and connecting edges and nodes:
+    1. Users would like a functionality to add nodes by clicking them or dragging - the nodes in scrollbar look like buttons.
+    2. It is not clear how to delete or add an edge.
+    3. It would be more intuitive if adding new nodes would be done in “add to already existing node manner”.
+    4. Or maybe add a starting point for the edge to connect.
+3. We should add some kind of functionality for the users to execute the graph from graph builder.
+4. We miss a message that inform that saving of a graph wasn’t successful.
+5. Difference between ‘save’ and ‘save as draft’ is not clear to the users.
+6. Improve node info - preferably add names, because reference is not clear enough. Also maybe show the data that the node stores.
+7. Improve the layout of buttons used in the node editor - bigger button should draw more attention
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7474d1c4-a651-45cd-a495-774371b4e73e/Untitled.png)
+
+1. Condition nodes:
+    1. The description in the filter node was not clear. Names are not specific enough.
+    2. Filter is heavy - a lot of info
+2. Action nodes:
+    1. Description for passing the data into body was not clear.
+    2. Description of what argument is wasn't clear.
+    3. Forgot to add argument after entering it to Json body. - maybe some kind of check to prevent this.
+3. User clicked on "edit" while trying to connect the nodes.
+4. User confused "add argument button.
+5. User didn't know the proper format of JSON.
+6. Some sort of debugger - step by step what data is stored inside each node.
+7. Rename arguments or think about description
+8. Users didn’t always save changes. Maybe a pop out?
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7dc87a79-998a-496e-b6c6-9063bb28f9e2/Untitled.png)
+
+1. Accidently deleted a node
+2. Time zone for trigger node
+3. Make selecting the parent more explicit
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/da98d1b2-1505-44d1-b655-f80ebe295a30/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cd2d79b2-c53a-447f-9a21-8005678ead05/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9d7d4177-01af-4623-a5fb-81eea7b7be85/Untitled.png)
+
+1. Clicking edge - deleting
+2. I would expect clicking the node to open the edit screen, rather than adding arrows.
+3. make it a button instead of a hidden functionality
+4. didn't think of that but after figuring it out it was ok
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/34263e47-831f-4e7f-aed5-8b053e838f63/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6659b14f-6c8b-49ff-8d27-bb33e1a59d59/Untitled.png)
+
+1. Arguments - are not descriptive enough.
+2. Better handling for json field - add brackets, format, etc.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e083867-eb3e-4131-9b6c-de9f290182cf/Untitled.png)
+
+1. Better descriptions and positioning of the forms.
+2. Compare against is confusing
+3. In general improve names and try to make it more intuitive for the users to work with.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/50ec98a0-160c-48a6-9cc5-e8d2384a887a/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/07a48b92-9aba-437c-be5c-d817bb27c491/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14f3cf65-4b69-4c12-bd7d-72467f022eeb/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0cf8538-eaa3-492a-b0ee-2742bab5c5fd/Untitled.png)
+
+1. Execution of a graph.
+2. Wasn’t aware that the side menu existed.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eed4914f-6b82-49c8-878b-41baa240948a/Untitled.png)
+
+What should we improve on?
+
+1. Preferably add more visual way of displaying information - as it is now - forms are text heavy.
+2. More descriptions, examples, tutorials, information, context
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2b9b7a54-c0f7-470b-b0ea-4aceb274cafb/Untitled.png)
+
+Difference between save and save as draft.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bf930f18-3d14-412c-a1e9-14243f9568b6/Untitled.png)
+
+1. After user got there, it was very simple.
+2.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/778c832d-b92c-4e99-b29e-4096f45b2e64/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/40489a3e-86ee-43fa-a1b7-e40890a9db25/Untitled.png)
+
+## Notes
+
+- we only got 10 responses but it was enough to get some very concrete and useful feedback
+- going over the forms and what tasks we did
+- most important points on the user tests and the received feedback
+    - loading screen
+    - page for new graph creation feels empty, too much negative space
+    - observation: users were seeing the application for the first time, but they got noticeably better at using the application over time
+    - not clear that the **trigger** is a start node! the solution we liked is to have the trigger node in the graph by default
+    - nodes look like buttons! **users tried to click the nodes** instead of drag and dropping
+    - not clear how to **delete or add an edge** at first; maybe add a separate button for adding and clicking to delete
+    - adding nodes should potentially be different: always appending new nodes to an existing graph instead of adding nodes and then connecting them
+    - it should be possible to execute the graph from the builder!
+    - the **forms** have a lot of text, difficult to understand at a glance.
+    - pop up about unsaved changes when leaving the graph editor
+    - accidental **deletion**, button easy to miss-click
+    - **labels** not very intuitive, maybe change the names
+    - time zones for trigger schedule potentially: at least specify which time zone we are using, then users can adjust on their own
+- good to prioritise things which are impossible to recover from, like node deletion, since having that be unintuitive could be very frustrating
+- summary of what we did this week and retrospective conclusions, showcase of test coverage reports
+
+### Github
+
+- time estimates and weights a bit inconsistent, try to work on this
+- we should go back and try to improve the previous issues
+- if we have some sort of rule for assigning weights then we should make it explicit and put it into the code of conduct or report

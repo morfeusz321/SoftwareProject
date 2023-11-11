@@ -1,0 +1,14 @@
+<mat-card class="graph-card">
+  <mat-card-header class="graph-card__header">
+    <p class="graph-card__name" [matTooltip]="graph.name" matTooltipPosition="above">{{graph.name}}</p>
+    <button mat-icon-button (click)="renameGraph()"><mat-icon>edit</mat-icon></button>
+  </mat-card-header>
+  <div class="graph-card__image-container">
+    <img mat-card-image class="graph-card__image" src="assets/images/graph-placeholder.jpeg" alt="graph logo" >
+  </div>
+  <mat-card-actions class="graph-card__actions">
+    <mat-slide-toggle [checked]="graph.isActive" (change)="updateActive()">{{isActiveString | transloco}}</mat-slide-toggle>
+    <button mat-mini-fab (click)="editGraph()"><mat-icon>edit</mat-icon> </button>
+    <button mat-mini-fab color="warn" (click)="deletePopOut()"><mat-icon>delete</mat-icon></button>
+  </mat-card-actions>
+</mat-card>

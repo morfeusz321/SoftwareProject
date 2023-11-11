@@ -1,0 +1,45 @@
+<mat-accordion *ngIf="selectedNode" multi="true" [formGroup]="nodeEditForm">
+  <form [formGroup]="nodeName" *ngIf="!isTrigger">
+    <mat-card>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input required matInput formControlName="name" class="nameInput">
+      </mat-form-field>
+    </mat-card>
+  </form>
+  <app-form-card type="url" *ngIf="urlVisible">
+    <app-url-form formGroupName="urlForm"></app-url-form>
+  </app-form-card>
+  <app-form-card type="auth" *ngIf="authVisible">
+    <app-auth-form formGroupName="authForm"></app-auth-form>
+  </app-form-card>
+  <app-form-card type="body" *ngIf="bodyVisible">
+    <app-body-form formGroupName="bodyForm"></app-body-form>
+  </app-form-card>
+  <app-form-card type="args" *ngIf="argumentsVisible">
+    <app-arg-form formGroupName="argForm"></app-arg-form>
+  </app-form-card>
+  <app-form-card type="condition" *ngIf="conditionalVisible">
+    <app-conditional-form formGroupName="conditionForm" [index]="this.index"></app-conditional-form>
+  </app-form-card>
+  <app-form-card type="trigger" *ngIf="isTrigger">
+    <app-trigger-form formGroupName="triggerForm"></app-trigger-form>
+  </app-form-card>
+  <app-form-card type="invite" *ngIf="inviteVisible">
+    <app-invite-form formGroupName="inviteForm"></app-invite-form>
+  </app-form-card>
+  <app-form-card type="map" *ngIf="isMap && nodeEditForm.contains('mapForm')">
+    <app-map-form formGroupName="mapForm"></app-map-form>
+  </app-form-card>
+  <app-form-card type="email" *ngIf="inviteVisible && nodeEditForm.contains('emailForm')">
+    <app-email-form formGroupName="emailForm"></app-email-form>
+  </app-form-card>
+</mat-accordion>
+<div class="actions">
+  <button class="save-button" [disabled]="!nodeEditForm.valid" mat-raised-button color="primary" (click)="saveNode()">
+    {{'nodeEditor.saveNode' | transloco}}
+  </button>
+  <button class="delete-button" mat-raised-button color="warn" (click)="deleteNode()" *ngIf="!isTrigger">
+    {{'nodeEditor.deleteNode' | transloco}}
+  </button>
+</div>

@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+
+  .app-sidenav-container {
+    background-color: mat.get-color-from-palette($primary, 900);
+  }
+
+  mat-list-item {
+    &:hover {
+      background: rgba(mat.get-color-from-palette($accent, 400), 0.2);
+    }
+  }
+
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+}
+

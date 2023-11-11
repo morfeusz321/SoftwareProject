@@ -1,0 +1,77 @@
+@import "src/app/variables";
+
+:host {
+  display: flex;
+  justify-content: center;
+  box-shadow: 5px 5px 5px 0 rgba(107, 104, 107, 0.5);
+  width: 94px;
+  height: 94px;
+  border-radius: 10px;
+  z-index: 997;
+  background-color: white;
+  border: $primary-color 3px solid;
+
+  .node-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    cursor: grab;
+
+    &__controls {
+      flex-direction: row-reverse;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      height: 25px;
+      margin-top: 5px;
+      margin-right: 5px;
+
+      button[mat-icon-button] {
+        &.edit-button, &.delete-button, &.info-button {
+          width: $small-size-button;
+          height: $small-size-button;
+          line-height: $small-size-button;
+          margin: 2px;
+
+          .mat-icon {
+            font-size: $small-size-icon;
+            width: $small-size-icon;
+            height: $small-size-icon;
+            position: relative;
+            top: -11px;
+            left: -9px;
+          }
+
+          ::ng-deep .mat-mdc-button-touch-target {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    &__label {
+      margin: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 55px;
+      cursor: grab;
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+
+}

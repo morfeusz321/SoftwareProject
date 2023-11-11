@@ -1,0 +1,11 @@
+:host {
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dialog-content {
+    height: 480px;
+  }
+}

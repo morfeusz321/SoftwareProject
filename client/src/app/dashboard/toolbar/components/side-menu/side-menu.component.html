@@ -1,0 +1,14 @@
+<mat-sidenav-container class="example-sidenav-container">
+  <mat-sidenav #sidenav mode="over" class="app-sidenav-container">
+    <mat-list>
+      <mat-list-item *ngFor="let route of ROUTES" >
+          <a [routerLink]="route.link" (click)="toggleMenu()">{{'sidebar.routes.' + route.name | transloco}}</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="app-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

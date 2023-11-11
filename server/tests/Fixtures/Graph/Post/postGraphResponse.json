@@ -1,0 +1,117 @@
+{
+  "id": 5,
+  "name": "Adam",
+  "user": {
+    "id": 1
+  },
+  "nodes": [
+    {
+      "schedule": "0 1 * * *",
+      "id": "8419dd08-8518-4285-8d92-0d1be66d986d",
+      "type": "TRIGGER",
+      "position": {
+        "positionX": 817,
+        "positionY": 59,
+        "positionZ": 0
+      },
+      "neighbours": [
+        "114b3dbc-769b-46aa-948e-060f2d07dc0a"
+      ]
+    },
+    {
+      "expression": {
+        "comparisonType": "Equal",
+        "compareTo": "valueFromUser",
+        "firstFieldValue": "userId",
+        "firstFieldNodeId": "114b3dbc-769b-46aa-948e-060f2d07dc0a",
+        "secondFieldUserValue": null,
+        "secondFieldNodeValue": "",
+        "secondFieldNodeId": ""
+      },
+      "id": "b2b14c9c-8e96-4613-970e-b53e95c3ed26",
+      "type": "IF",
+      "position": {
+        "positionX": 258,
+        "positionY": 168,
+        "positionZ": 0
+      },
+      "neighbours": [
+        "0c1ad5ba-5b4b-4ef5-96bc-b1fe84958a35"
+      ]
+    },
+    {
+      "request": {
+        "id": 14,
+        "body": "{}",
+        "url": "https://www.google.com/",
+        "method": "GET",
+        "auth": {
+          "token": "",
+          "type": "BEARER"
+        }
+      },
+      "arguments": [],
+      "id": "114b3dbc-769b-46aa-948e-060f2d07dc0a",
+      "type": "GET",
+      "position": {
+        "positionX": 558,
+        "positionY": 108,
+        "positionZ": 0
+      },
+      "neighbours": [
+        "b2b14c9c-8e96-4613-970e-b53e95c3ed26"
+      ]
+    },
+    {
+      "expression": {
+        "comparisonType": "Equal",
+        "compareTo": "valueFromNode",
+        "firstFieldValue": "user",
+        "firstFieldNodeId": "114b3dbc-769b-46aa-948e-060f2d07dc0a",
+        "secondFieldUserValue": "",
+        "secondFieldNodeValue": "valueFromNode",
+        "secondFieldNodeId": "114b3dbc-769b-46aa-948e-060f2d07dc0a"
+      },
+      "id": "0c1ad5ba-5b4b-4ef5-96bc-b1fe84958a35",
+      "type": "FILTER",
+      "position": {
+        "positionX": 596,
+        "positionY": 298,
+        "positionZ": 0
+      },
+      "neighbours": [
+        "4657b9bb-4bf7-4448-874e-09180e745a62"
+      ]
+    },
+    {
+      "request": {
+        "id": 15,
+        "body": "{\"user\":<<user>>}",
+        "url": "https://www.google.com/",
+        "method": "PUT",
+        "auth": {
+          "token": "",
+          "type": "API_KEY"
+        }
+      },
+      "arguments": [
+        {
+          "id": 3,
+          "alias": "user",
+          "parentId": "0c1ad5ba-5b4b-4ef5-96bc-b1fe84958a35",
+          "field": "user"
+        }
+      ],
+      "id": "4657b9bb-4bf7-4448-874e-09180e745a62",
+      "type": "PUT",
+      "position": {
+        "positionX": 931,
+        "positionY": 256,
+        "positionZ": 0
+      },
+      "neighbours": []
+    }
+  ],
+  "isActive": false,
+  "isDraft": false
+}

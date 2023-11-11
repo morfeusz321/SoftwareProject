@@ -1,0 +1,16 @@
+.graph-overview-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .add-graph-card {
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+  }
+  .add-graph-button {
+    height: 100%;
+    width: 100%;
+    font-size: 80px;
+  }
+}

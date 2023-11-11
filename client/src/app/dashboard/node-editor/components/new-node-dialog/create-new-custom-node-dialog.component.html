@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Create new custom node</h1>
+<div class="dialog-content" mat-dialog-content [formGroup]="nodeEditForm">
+  <mat-card>
+    <mat-form-field appearance="fill">
+      <mat-label>Name of the node</mat-label>
+      <input required matInput formControlName="name">
+    </mat-form-field>
+  </mat-card>
+  <mat-card>
+    <mat-form-field appearance="fill">
+      <mat-label>Request method</mat-label>
+      <mat-select required formControlName="method" >
+        <mat-option *ngFor="let method of methods" [value]="method">
+          {{method}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
+  <app-url-form formGroupName="urlForm"></app-url-form>
+  <app-auth-form formGroupName="authForm"></app-auth-form>
+  <app-body-form formGroupName="bodyForm"></app-body-form>
+</div>
+<div mat-dialog-actions class="actions">
+  <button mat-raised-button color="warn" (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button color="primary" [disabled]="!nodeEditForm.valid" (click)="onSaveClick()" [mat-dialog-close]="data">Save</button>
+</div>

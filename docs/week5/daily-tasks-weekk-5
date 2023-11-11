@@ -1,0 +1,65 @@
+5.
+
+# Week 5
+
+## 22.05 - Monday
+
+Midterm presentation,
+
+Introduction feedback assignment,
+
+Feedback from coach,
+
+Distributed and created issues - for the rest of the project.
+
+## 23.05 - Tuesday
+
+Jack - Began work on trigger node execution
+
+Rafał - Transloco frontend
+
+Liam - ACC
+
+Filip - ACC
+
+Piotr - ACC
+
+## 24.05 - Wednesday
+
+Jack - Trigger node (core execution logic)
+
+Rafal - Linter and metrics PHP
+
+Liam - Finished branch 43 and started looking into testing
+
+Filip - Logs for the graph execution
+
+Piotr - Graph execution frontend
+
+## 25.05 Thursday
+
+Jack - Trigger node (finishing up, data fixtures and tests)
+
+Rafal - Linter and metrics PHP
+
+Liam - tested rgx store
+
+Filip - Integrating backend with frontend
+
+Piotr - Graph execution frontend
+
+## 26.05 - Friday
+
+Piotr - Research usability
+Jack - Using model in backend documentation to autogenerate example requests
+Filip - Scheduled task execution
+Rafał -  CPL
+Liam - started testing node edit menu
+
+Team:
+
+1. Merge develop to main
+2. Close the milestone
+3. Meeting with client
+4. Sprint retrospective
+5. Coaches assignment

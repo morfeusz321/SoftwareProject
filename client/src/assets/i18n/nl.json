@@ -1,0 +1,148 @@
+{
+  "toolbar": {
+    "contrast": "High Contrast"
+  },
+  "sidebar": {
+    "routes": {
+      "graphs": "Saved Flows in Dutch",
+      "saved-nodes": "Saved steps in Dutch",
+      "builder": "New Flow in Dutch",
+      "execution": "Execution in Dutch"
+    }
+  },
+  "execute": {
+    "no-graphs-saved": "You don't have any saved flows. in Dutch",
+    "select-graph": "Select flow to Execute in Dutch",
+    "execute-graph": "Execute Flow in Dutch",
+    "clear-logs": "Clear Logs in Dutch",
+    "title": "Flow execution in Dutch",
+    "sandbox": "Sandbox in Dutch"
+  },
+  "graphs": {
+    "edit": "EDIT IN DUTCH",
+    "delete": "DELETE IN DUTCH",
+    "rename": "RENAME IN DUTCH",
+    "disable": "DISABLE IN DUTCH",
+    "enable": "ENABLE IN DUTCH",
+    "cancel": "CANCEL IN DUTCH",
+    "renameTitle": "RENAME TITLE IN DUTCH",
+    "deleteTitle": "DELETE TITLE IN DUTCH"
+  },
+  "graphBuilder": {
+    "save": "SAVE IN DUTCH",
+    "saveAsDraft": "SAVE AS DRAFT IN DUTCH",
+    "nodeButtons": {
+      "edit": "Edit step in dutch",
+      "delete": "Delete step in dutch",
+      "execute": "Execute step in dutch"
+    },
+    "execute":  "EXECUTE IN DUTCH",
+    "schedule": "Scheduled Execution in dutch",
+    "schedule-info": "Turning this on will execute the created flow on an interval specified in the START step in Dutch"
+  },
+  "nodeEditor": {
+    "headers": {
+      "args": "Arguments IN DUTCH",
+      "argsInfo": "Here you can declare fields from other steps that you want to use in the body of your request. IN DUTCH",
+      "url": "URL IN DUTCH",
+      "urlInfo": "Specify the URL of the endpoint that you send the request to. IN DUTCH",
+      "auth": "Authentication IN DUTCH",
+      "authInfo": "Specify the authentication method of the request that you want to send. IN DUTCH",
+      "body": "Request Body IN DUTCH",
+      "bodyInfo": "Specify the body of the request that you want to send. IN DUTCH",
+      "condition": "Condition IN DUTCH",
+      "conditionInfo": "Here you can compare two values to each other. You can provide a value from another step or fill in your own value. IN DUTCH",
+      "trigger": "Schedule Execution IN DUTCH",
+      "triggerInfo": "Specify how often should the flow be executed. A flow is only executed if it is also enabled. IN DUTCH",
+      "inviteInfo": "Select data to create an invite job with.",
+      "email": "Email",
+      "emailInfo": "Specify which field is the email address of the user you want to invite.",
+      "map": "Change field names",
+      "mapInfo": "Here you can change the names of the fields in data received in previous steps."
+    },
+    "argForm": {
+      "addArgument": "New Argument IN DUTCH",
+      "alias": "New name IN DUTCH",
+      "node": "step IN DUTCH",
+      "field": "Field from step IN DUTCH"
+    },
+    "authForm": {
+      "authMethod": "Authentication method IN DUTCH"
+    },
+    "bodyForm": {
+      "endpointBody": "Endpoint Body (if empty, type '{}') IN DUTCH"
+    },
+    "urlForm": {
+      "endpointURL": "Endpoint URL IN DUTCH"
+    },
+    "conditionForm": {
+      "firstValue": "First Value IN DUTCH",
+      "node": "step IN DUTCH",
+      "valueFromNode": "Value from step IN DUTCH",
+      "comparisonMethod": "Comparison method IN DUTCH",
+      "secondValue": "Second value IN DUTCH",
+      "userValueInfo": "You can provide your own value to compare against. IN DUTCH",
+      "nodeValueInfo":"Specify a step and a field in that step to compare against. IN DUTCH",
+      "userValue": "Value IN DUTCH",
+      "Equal": "Equal IN DUTCH",
+      "LessThan": "Less than IN DUTCH",
+      "LessThanOrEqual": "Less than or equal IN DUTCH",
+      "NotEqual": "Not equal IN DUTCH",
+      "GreaterOrEqual": "Greater than or equal IN DUTCH",
+      "GreaterThan": "Greater than IN DUTCH",
+      "firstValueInfo": "Here you can specify a step and a value that you want to take from it for comparison. IN DUTCH",
+      "secondValueInfo": "Here you can either specify a value from a step or provide your own value. IN DUTCH"
+    },
+    "scheduleForm": {
+      "intervalType": "Interval type IN DUTCH",
+      "repetitionTime": "Repetition Time IN DUTCH",
+      "weekday": "Day of the week IN DUTCH",
+      "dayOfTheMonth": "Day of the month IN DUTCH"
+    },
+    "saveNode": "Save step IN DUTCH",
+    "deleteNode": "Delete step IN DUTCH"
+  },
+  "tips": {
+    "addAndDeleteEdge": "Click two steps to connect or disconnect them. IN DUTCH",
+    "dragTheNodeToArea": "Drag to area. IN DUTCH"
+  },
+  "messages": {
+    "errors": {
+      "error": "Error IN DUTCH",
+      "cannotConnectToSchedule": "Cannot connect to the schedule step. IN DUTCH"
+    },
+    "warnings": {
+      "warning": "Warning in dutch",
+      "changes": "Consider saving your newly added changes in dutch"
+    },
+    "information": "Step info IN DUTCH"
+  },
+  "graphArea": {
+    "GET": "GET IN DUTCH",
+    "POST": "POST IN DUTCH",
+    "PUT": "PUT IN DUTCH",
+    "INVITE": "INVITE IN DUTCH",
+    "FILTER": "FILTER IN DUTCH",
+    "IF": "IF IN DUTCH",
+    "TRIGGER": "START IN DUTCH",
+    "Edit": "Edit in Dutch",
+    "Delete": "Delete in Dutch",
+    "MAP": "MAP",
+    "description": {
+      "GET": "Fetch data in Dutch",
+      "POST": "Create data in Dutch",
+      "PUT": "Update data in Dutch",
+      "INVITE": "Create invite job in Dutch",
+      "FILTER": "Filter data in Dutch",
+      "IF": "Create condition in Dutch",
+      "TRIGGER": "Start flow in Dutch",
+      "MAP": "Change field names"
+    },
+    "nodes": {
+      "messages": {
+        "noUrl": "No URL specified NL",
+        "request-success": "Request sent successfully NL"
+      }
+    }
+  }
+}

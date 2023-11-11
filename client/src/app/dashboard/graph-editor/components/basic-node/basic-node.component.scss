@@ -1,0 +1,98 @@
+@import "src/app/variables";
+
+:host {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 5px 5px rgba(107, 104, 107, 0.2);
+  background-color: white;
+  opacity: 1;
+  width:140px;
+  height: 100px;
+  border-radius: 8px;
+  z-index: 997;
+  color: black;
+
+  .node-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: grab;
+
+    .mat-badge-content {
+      padding: 2px;
+      min-width: 30px;
+      width: fit-content;
+      text-align: center;
+      border-radius: 7px;
+      //left: 13px;
+    }
+
+    &__controls {
+      flex-direction: row-reverse;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      margin-top: 5px;
+      margin-right: 5px;
+
+      button[mat-icon-button] {
+          &.edit-button, &.execute-button, &.delete-button {
+          width: $small-size-button;
+          height: $small-size-button;
+          line-height: $small-size-button;
+          margin: 2px;
+
+          .mat-icon {
+            font-size: $small-size-icon;
+            width: $small-size-icon;
+            height: $small-size-icon;
+            position: relative;
+            top: -11px;
+            left: -9px;
+          }
+          ::ng-deep .mat-mdc-button-touch-target {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    &__arrow-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__info {
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0;
+      align-items: center;
+      flex-direction: column;
+
+      .reference-card {
+        width: 130px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+
+        &__name {
+          margin: 0;
+          max-width: 130px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .slots-container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+    }
+  }
+}

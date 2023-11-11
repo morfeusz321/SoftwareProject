@@ -1,0 +1,42 @@
+<div
+  class="node-container"
+  *ngIf="!shadowNode"
+  #nodeContainer
+  matBadgePosition="before"
+  matBadge="{{ node?.type }}"
+  [matTooltip]="node?.type === triggerNodeType ? ('tips.addAndDeleteEdge' | transloco) : ''"
+>
+  <div class="node-container__controls">
+    <button
+      mat-icon-button
+      class="edit-button"
+      (click)="editNodeClicked()"
+      matTooltip="{{ 'graphBuilder.nodeButtons.edit' | transloco }}"
+    >
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button
+      *ngIf="node.type === MethodsEnum.GET"
+      mat-icon-button
+      class="execute-button"
+      (click)="executeNode()"
+      matTooltip="{{ 'graphBuilder.nodeButtons.execute' | transloco }}"
+    >
+      <mat-icon>play_arrow</mat-icon>
+    </button>
+    <button
+      *ngIf="node.type !== triggerNodeType"
+      mat-icon-button
+      class="delete-button"
+      (click)="deleteNodeClicked()"
+      matTooltip="{{ 'graphBuilder.nodeButtons.delete' | transloco }}"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <div class="node-container__info" (click)="selectNodeClicked()">
+    <mat-card class="reference-card">
+      <p class="reference-card__name">{{node.type === triggerNodeType ? ('graphArea.TRIGGER' | transloco) : node?.name}}</p>
+    </mat-card>
+  </div>
+</div>

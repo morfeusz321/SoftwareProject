@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Confirm</h1>
+<div class="popup" mat-dialog-content>
+  <p>{{ 'graphs.' + data.title | transloco }}</p>
+  <ng-container class="newName" *ngIf="data.title === 'renameTitle'">
+    <mat-form-field class="newName">
+      <input matInput [(ngModel)]="newName" placeholder="New name">
+    </mat-form-field>
+  </ng-container>
+</div>
+<div mat-dialog-actions class="button-container">
+    <button mat-raised-button id="yes-button" color="accent" (click)="onConfirm()">{{'graphs.' + data.messageOnConfirm | transloco}}</button>
+    <button mat-raised-button id="no-button" color="warn" (click)="onCancel()">{{'graphs.' + data.messageOnCancel | transloco}}</button>
+</div>

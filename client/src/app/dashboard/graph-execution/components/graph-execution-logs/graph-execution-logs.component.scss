@@ -1,0 +1,65 @@
+.execution-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .selector-card {
+    box-shadow: 0 0 5px 5px rgba(107, 104, 107, 0.2);
+    margin-bottom: 10px;
+    border: 1px solid #54b5ebff;
+
+    .graph-selector {
+      height: 56px;
+      flex-direction: row;
+      justify-content: flex-start;
+      display: flex;
+      align-items: flex-start;
+
+      .graph-form {
+        width: 500px;
+      }
+
+      .buttons {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+  }
+
+  .execution-log-container {
+    margin: 10px;
+  }
+
+  .log-info {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    &__line {
+      white-space: pre-wrap;
+    }
+
+  }
+
+  .logs-window {
+    flex-grow: 1;
+    border: 0;
+
+    .logs-output {
+      height: 100%;
+      width: 100%;
+      border: 1px solid black;
+      overflow: auto;
+      resize: none;
+      box-shadow: 0 0 5px 5px rgba(107, 104, 107, 0.2);
+      margin: 0;
+      font-family: Roboto, 'Helvetica Neue', sans-serif;
+      font-size: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  }
+}

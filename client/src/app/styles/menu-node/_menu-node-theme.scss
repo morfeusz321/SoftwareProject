@@ -1,0 +1,74 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+  $warn: map.get($color-config, 'warn');
+
+  .menu-node {
+    &--get {
+      border-color: mat.get-color-from-palette($primary, G400);
+    }
+
+    &--put {
+      border-color: mat.get-color-from-palette($primary, B400);
+    }
+
+    &--invite {
+      $first-gradient-color: mat.get-color-from-palette($primary, GRADPR1);
+      $second-gradient-color: mat.get-color-from-palette($primary, GRADPR2);
+      @if $first-gradient-color != null {
+        background: white;
+        height: 94px;
+        width: 94px;
+        border-radius: 10px;
+      } @else {
+        border-color: mat.get-color-from-palette($warn, 400);
+      }
+      &:before {
+        @if $first-gradient-color != null {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          margin: -3px;
+          border-radius: inherit;
+          background: linear-gradient(90deg, $first-gradient-color 2.72%, $second-gradient-color 99.93%);
+        } @else {
+          visibility: hidden;
+          border-color: mat.get-color-from-palette($warn, 400);
+        }
+      }
+    }
+
+    &--post {
+      border-color: mat.get-color-from-palette($primary, Y400);
+    }
+
+    &--filter {
+      border-color: mat.get-color-from-palette($primary, R400);
+    }
+
+    &--map {
+      border-color: mat.get-color-from-palette($primary, BR400);
+    }
+
+    &--if {
+      border-color: mat.get-color-from-palette($primary, GR400);
+    }
+  }
+
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+}
+

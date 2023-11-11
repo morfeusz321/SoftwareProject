@@ -1,0 +1,27 @@
+# Week 5
+
+Sprint Retrospective 26.05.2023
+
+1. Review sprint details:
+    - Sprint goals:
+        - Finish up user interface
+        - Graph execution
+    - Key deliverables:
+        - Execution of the graph
+        - Integration with insocial API
+2. Insights and observations:
+    - What went well during the sprint?
+        - Final presentation went pretty good. We have received a green flag.
+        - We have applied the feedback, merge request checklist is way more useful now.
+    - What didn't go well?
+        - We had a couple of “hanging” merge requests and unused branches.
+    - Any issues or obstacles faced?
+        - Piotr - I overcomplicated design of a component, which made it harder to get it to work.
+        - Filip - The definition of one task changed so I had to rethink how we will achieve graph execution just using our app.
+        - Jack - Main task for the week went smooth. Last small task with documentation generation was really annoying because PHP annotations are cursed and poorly documented.
+        - Rafał - New technology caused some problems and thus assigned issue took a bit longer than expected. Also PHP is really painful and I miss my frontend 😢
+        - Liam - Frontend testing is just painful
+3. Improvement areas:
+    - Merge request management
+4. Action items:
+    - Review mr’s more regularly

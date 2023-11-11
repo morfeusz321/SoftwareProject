@@ -1,0 +1,21 @@
+@import "src/app/variables";
+
+.argument {
+  display: flex;
+  height: 300px;
+}
+
+.arguments {
+  display: flex;
+  flex-direction: column;
+}
+
+.save-argument {
+  background-color: $color-blue;
+  color: white;
+}
+
+.remove-argument {
+  background-color: $primary-color;
+  color: white;
+}

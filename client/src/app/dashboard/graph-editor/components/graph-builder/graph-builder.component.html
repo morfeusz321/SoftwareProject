@@ -1,0 +1,123 @@
+<div class="graph-builder-container">
+  <div class="node-menu-container">
+    <div class="cdk-virtual-scroll-data-source-example">
+      <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="2" class="menu-viewport">
+        <div
+          cdkDropList
+          [cdkDropListData]="nodeMenuConfig"
+          class="node-list"
+          [cdkDropListEnterPredicate]="noReturnPredicate">
+          <div class="node-container">
+            <div class="node-container__descriptions">
+              <p class="description">REQUEST ACTIONS</p>
+            </div>
+            <div class="node-container__node">
+              <app-menu-node
+                *ngFor="let nodeType of actionNodeConfig"
+                [cdkDragData]="nodeType"
+                [menuNode]="nodeType"
+                (cdkDragReleased)="drop($event)"
+                (mousedown)="pressed($event)"
+                matTooltip="{{'tips.dragTheNodeToArea' | transloco}}"
+                cdkDrag>
+              </app-menu-node>
+            </div>
+          </div>
+          <div class="node-container__divider"></div>
+          <div class="node-container">
+            <div class="node-container__descriptions">
+              <p class="description">CONDITIONAL ACTIONS</p>
+            </div>
+            <div
+              class="node-container__node">
+              <app-menu-node
+                *ngFor="let nodeType of conditionalNodeConfig"
+                [cdkDragData]="nodeType"
+                [menuNode]="nodeType"
+                (cdkDragReleased)="drop($event)"
+                (mousedown)="pressed($event)"
+                matTooltip="{{'tips.dragTheNodeToArea' | transloco}}"
+                cdkDrag>
+              </app-menu-node>
+            </div>
+          </div>
+          <div class="node-container__divider"></div>
+          <div class="node-container">
+            <div class="node-container__descriptions">
+              <p class="description">INSOCIAL ACTIONS</p>
+            </div>
+            <div
+              class="node-container__node">
+              <app-menu-node
+                *ngFor="let nodeType of insocialNodeConfig"
+                [cdkDragData]="nodeType"
+                [menuNode]="nodeType"
+                (cdkDragReleased)="drop($event)"
+                (mousedown)="pressed($event)"
+                matTooltip="{{'tips.dragTheNodeToArea' | transloco}}"
+                cdkDrag>
+              </app-menu-node>
+            </div>
+          </div>
+          <div class="node-container__divider"></div>
+          <div class="node-container">
+            <div class="node-container__descriptions">
+              <p class="description">CUSTOM ACTIONS</p>
+            </div>
+            <div class="node-container__custom">
+              <div class="node-container__node" *ngIf="!loading else loader">
+                <app-custom-menu-node
+                  *ngFor="let customNode of customNodes"
+                  [cdkDragData]="customNode"
+                  [customNode]="customNode"
+                  (cdkDragReleased)="dropCustom($event)"
+                  (mousedown)="pressed($event)"
+                  (deleteNode)="deleteCustomNode($event)"
+                  (editNode)="openDialog($event)"
+                  cdkDrag>
+                </app-custom-menu-node>
+              </div>
+              <div class="node-container__node">
+                <button
+                  class="add-node-button"
+                  mat-icon-button
+                  (click)="openDialog()">
+                  <mat-icon class="icon" fontIcon="add"></mat-icon></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+    <div class="graph-details">
+      <mat-card class="details-card">
+        <mat-form-field class="name-field">
+          <input matInput [(ngModel)]="graph.name" />
+        </mat-form-field>
+        <span>
+          <mat-slide-toggle
+            [(ngModel)]="graph.isActive"
+            matTooltip="{{ 'graphBuilder.schedule-info' | transloco }}"
+          ></mat-slide-toggle>
+          <label class="schedule-label">{{ 'graphBuilder.schedule' | transloco }}</label>
+        </span>
+      </mat-card>
+    </div>
+    <app-button-column class="button-column" [name]="graph.name" [isActive]="graph.isActive"></app-button-column>
+  </div>
+  <div [ngClass]="executionExpanded ? 'graph-area-container-minimised' : 'graph-area-container-maximised'">
+    <app-graph-area></app-graph-area>
+  </div>
+  <div class="graph-execution-container">
+    <app-graph-execution-area
+      [expanded]="executionExpanded"
+      [selectedGraph]="graph"
+      (expandedChanged)="handleExpandedChanged($event)"
+    ></app-graph-execution-area>
+  </div>
+</div>
+<ng-template #loader>
+  <div class="loader">
+    <app-loader></app-loader>
+  </div>
+</ng-template>

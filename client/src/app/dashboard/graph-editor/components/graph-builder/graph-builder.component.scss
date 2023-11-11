@@ -1,0 +1,183 @@
+@import "src/app/variables";
+
+:host {
+  border-radius: 8px;
+  height: 100%;
+  box-shadow: 0 0 5px 5px rgba(107, 104, 107, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-builder-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .node-menu-container {
+    display: flex;
+
+    .graph-details {
+      width: 20%;
+      .details-card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .name-field {
+          width: 80%;
+        }
+        .schedule-label {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .cdk-virtual-scroll-data-source-example {
+      width: 65%;
+
+      .menu-viewport {
+        height: 160px;
+        overflow-y: hidden;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+
+        .node-list {
+          border: solid 1px #ccc;
+          display: flex;
+          flex-direction: row;
+          background: white;
+          border-radius: 4px;
+          overflow: hidden;
+
+          .node-container {
+            display: flex;
+            flex-direction: column;
+
+            &__divider {
+              height: 120px;
+              width: 2px;
+              background-color: $secondary-color;
+              margin: 10px;
+            }
+
+            &__custom {
+              display: flex;
+              flex-direction: row;
+            }
+
+            &__descriptions {
+              width: 100%;
+              height: 20px;
+              font-size: 12px;
+              font-weight: 500;
+              color: #2B353A;
+              text-align: center;
+            }
+
+            &__node {
+              display: flex;
+              flex-direction: row;
+
+              app-menu-node, app-custom-menu-node {
+                position: relative;
+                margin: 5px;
+              }
+
+              app-node-menu {
+                position: absolute;
+              }
+            }
+          }
+
+        }
+      }
+
+      .add-node-button {
+        height: 94px;
+        width: 94px;
+        margin: 10px;
+        border-radius: 10px;
+        background: white;
+
+        mat-icon {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 0; right: 0; bottom: 0; left: 0;
+          font-size: 50px;
+          height: 93px;
+          width: 93px;
+          border-radius: 8px;
+          background: white;
+
+          &:before {
+            background: $gradient-secondary;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          z-index: -1;
+          margin: -3px;
+          border-radius: inherit;
+          background: $gradient-secondary;
+        }
+      }
+
+      .loader {
+        margin: 5px;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 20px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px #ccc;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #2B353A;
+        border-radius: 10px;
+      }
+    }
+
+    .button-column {
+      width: 15%;
+    }
+  }
+
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+
+  .graph-area-container-maximised {
+    max-height: calc(100% - 163px - 48px);
+    transition: 1s ease;
+  }
+
+  .graph-area-container-minimised {
+    max-height: calc(50% - 163px);
+    transition: 1s ease;
+  }
+
+  .graph-execution-container {
+    flex-grow: 1;
+  }
+}
+

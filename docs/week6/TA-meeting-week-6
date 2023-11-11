@@ -1,0 +1,93 @@
+# Week 6 - Buddycheck + Usability testing
+
+1. How we are doing:
+    1. [Daily Tasks]
+    2. [Week 5]
+2. Discuss Buddycheck
+3. Discuss plan for usability tests:
+    1. Consent forms
+
+        [consent form.pdf](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c809215e-5a8e-4eb8-83a5-0571327d22fa/consent_form.pdf)
+
+    2. Set of a few tasks (as small as possible) to be performed by the user:
+        1. Create a new graph.
+        2. Create 3 prespecified grap/hs with increasing level of difficulty.
+        3. Save and execute a graph.
+    3. Measure a few criteria:
+        1. Completion (was the task completed or not? Direct/ Indirect?)
+        2. Duration (what takes the most time/ time on screen/ time on task)
+        3. Errors (how many times did the user try to take “the wrong way”
+        4. How descriptive is information used in our applications. Names, icons, etc.
+        5. How intuitive is application flow. Links, redirecting etc.
+        6. How well designed are buttons. Number of clicks, miss-click, is any button used too often?
+        7. How well designed is UI, does the user have to switch windows often? Or perform “annoying tasks every time he/she/… wants to do action X?
+    4. Get feedback and fill in google form:
+        1. What was overall user experience
+        2. Which part did you like?
+        3. Which part was the most annoying?
+    5. Answer on a scale 1 - 5:
+        1. How intuitive is the app?
+        2. How intuitive are descriptions?
+        3. How intuitive are the buttons?
+        4. How easy to use was it?
+
+Specifically check:
+
+1. Creating nodes
+2. Creating/ deleting edges
+3. Rearrange nodes
+4. Forms for action and condition nodes
+5. Saving graph
+6. Executing graph
+
+Questions:
+
+Weekly gitlab checkup
+
+## Notes
+
+Most important things from us:
+
+- what we’ve done (daily tasks for week 5)
+- feedback on usability
+- our status with teamwork
+
+### Usability testing feedback
+
+- seems unintuitive and inefficient to take a break to write down notes after they’re done, probably we should try to do this as they go
+- since it’s hard to write down everything in real time, it might be useful to look at some more objective and concrete metrics
+    - how many missclicks?
+    - what kind of things were unacceptable in the user’s opinion
+    - how many clicks did they need?
+    - how many tasks did they accomplish our of all given
+- we’ll ask them some questions after the process, that will be an important source of information
+- two possible ways: be very specific or be high level (e.g. create a graph)
+- we’ve done one test with Liam and found a lot to improve already
+    - but we should get a lot of people and assess how frequent different issues are
+    - so we shouldn’t extrapolate too much from just one data point, look at frequency in a larger sample
+- good to include an impact matrix in our report
+- look at ethics checklist on https://www.tudelft.nl/en/about-tu-delft/strategy/integrity-policy/human-research-ethics
+    - data, recruitment, look at the question and for the relevant parts include a section about risk and mitigation
+- inclusivity
+    - colour blind people - we’ve thought about that a bit, implementing
+    - older or less technically capable users - something like zooming in or adjusting font size
+    - use user tests to figure out how impactful this is
+- consider some HCI principles: feedback, recovering from errors, simplicity, etc
+- are we doing a cognitive walkthrough? A/B testing? heuristic evaluation? these are types of usability testing approach, we can look into this and choose an existing appropriate method
+
+### Miscellaneous
+
+- We should mention the problems with Insocial’s systems breaking in the final report; it’s a risk factor for infeasibility
+    - another risk to consider, we’re working on something that other devs are working on so it can break; + probably info about how this did in fact happen and what we did to deal with this / mitigate in the future
+- We changed requirements slightly (graph execution scheduling is now on our end instead of the client)
+- GitLab feedback:
+    - improve consistency in how we use weight and times
+        - however we go about this we should be consistent, every issue should have the weight and time taken
+        - probably edit the previous ones too
+        - if we have some systematic formula like “weight is time + difficulty” then we should document this somewhere, CoC or project report
+    - e2e testing: try to get the pipeline jobs to work, if not then at least make sure to document this somewhere
+    - try to make commit messages more specifically
+    - on MRs we can comment on code style
+    - tick off the checklist for tasks to be done in the issues
+- not critical that everyone does both frontend and backend, as long as everyone knows what’s going on on the other side
+- make sure to upload notes and agenda for next week

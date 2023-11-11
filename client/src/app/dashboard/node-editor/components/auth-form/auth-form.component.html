@@ -1,0 +1,19 @@
+<form [formGroup]="authForm">
+  <div style="display: flex; flex-direction: column">
+    <mat-card>
+      <mat-form-field appearance="fill">
+        <mat-label>{{authFormText + 'authMethod' | transloco}}</mat-label>
+          <mat-select required formControlName="type" >
+            <mat-option *ngFor="let method of methods" [value]="method">
+              {{method}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" *ngIf="authForm.controls['type'].value !== 'NONE'">
+        <mat-label>Auth token</mat-label>
+        <input matInput formControlName="token">
+      </mat-form-field>
+    </mat-card>
+  </div>
+  <!-- {{this.authForm.value | json}} -->
+</form>

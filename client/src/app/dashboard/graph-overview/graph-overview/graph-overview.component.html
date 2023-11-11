@@ -1,0 +1,6 @@
+<div class="graph-overview-container">
+  <app-graph-overview-graph *ngFor="let graph of graphs$ | async" [graph]="graph"></app-graph-overview-graph>
+  <mat-card class="add-graph-card">
+    <button mat-button class="add-graph-button" (click)="newGraph()">+</button>
+  </mat-card>
+</div>

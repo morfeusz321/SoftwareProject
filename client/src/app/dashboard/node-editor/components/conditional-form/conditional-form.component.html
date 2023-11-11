@@ -1,0 +1,123 @@
+<form [formGroup]="conditionForm">
+  <div style="display: flex; flex-direction: column">
+    <mat-card class="card">
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header class="header">
+          <mat-panel-title class="title">
+            {{conditionalFormText + 'firstValue' | transloco}}
+            <mat-icon matTooltip="{{conditionalFormText + 'firstValueInfo' | transloco}}">info</mat-icon>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+          <div class="tab">
+            <mat-form-field appearance="fill">
+              <mat-label>{{conditionalFormText + 'node' | transloco}}</mat-label>
+              <mat-select required formControlName="firstFieldNodeId"  (click)="filterNodes()" [compareWith]="compareNodes">
+                <mat-option *ngFor="let node of nodesWithoutSelectedNode" [value]="node.id" (mouseenter)="highlightNode(node.id)" (mouseleave)="clearHighlighted()">
+                  {{node.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>{{conditionalFormText + 'valueFromNode' | transloco}}</mat-label>
+              <input required matInput formControlName="firstFieldValue">
+            </mat-form-field>
+          </div>
+        </ng-template>
+      </mat-expansion-panel>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <mat-card class="card">
+      <mat-form-field appearance="fill">
+        <mat-label>{{conditionalFormText + 'comparisonMethod' | transloco}}</mat-label>
+        <mat-select required formControlName="comparisonType">
+          <mat-option *ngFor="let condition of conditions" [value]="condition">
+            {{conditionalFormText + condition | transloco}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <mat-card class="card">
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header class="header">
+          <mat-panel-title class="title">
+            {{conditionalFormText + 'secondValue' | transloco}}
+            <mat-icon matTooltip="{{conditionalFormText + 'secondValueInfo' | transloco}}">info</mat-icon>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent aria-expanded="false">
+        <mat-radio-group class="compareTo" formControlName="compareTo">
+          <mat-radio-button [value]="comparisonType.USER_VALUE" matTooltip="{{conditionalFormText + 'userValueInfo' | transloco}}"><mat-icon>person_outline</mat-icon></mat-radio-button>
+          <mat-radio-button [value]="comparisonType.NODE_VALUE" matTooltip="{{conditionalFormText + 'nodeValueInfo' | transloco}}"><mat-icon>crop_landscape </mat-icon></mat-radio-button>
+          <mat-radio-button [value]="comparisonType.TIME_VALUE" matTooltip="{{conditionalFormText + 'calendarInfo' | transloco}}"><mat-icon>calendar_today</mat-icon></mat-radio-button>
+        </mat-radio-group>
+        <div class="tab" *ngIf="compareToField === comparisonType.USER_VALUE">
+          <mat-form-field appearance="fill">
+            <mat-label>{{conditionalFormText + 'userValue' | transloco}}</mat-label>
+            <input required matInput formControlName="secondFieldUserValue">
+          </mat-form-field>
+        </div>
+        <div class="tab" *ngIf="compareToField === comparisonType.NODE_VALUE">
+          <mat-form-field appearance="fill">
+            <mat-label>{{conditionalFormText + 'node' | transloco}}</mat-label>
+            <mat-select required formControlName="secondFieldNodeId" (click)="filterNodes()">
+              <mat-option *ngFor="let node of nodesWithoutSelectedNode" [value]="node.id" (mouseenter)="highlightNode(node.id)" (mouseleave)="clearHighlighted()">
+                {{node.id}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>{{conditionalFormText + 'valueFromNode' | transloco}}</mat-label>
+            <input required matInput formControlName="secondFieldNodeValue">
+          </mat-form-field>
+        </div>
+        <div *ngIf="compareToField === comparisonType.TIME_VALUE" class="timeValue">
+            <button mat-icon-button (click)="showTip()"><mat-icon>info</mat-icon></button>
+            <div class="tab">
+                <div class="numberField">
+                  <mat-form-field appearance="fill" class="numberInput" >
+                    <input required matInput min="0" type="number" formControlName="secondFieldTimeDays">
+                  </mat-form-field>
+                  <span class="description">Days</span>
+                </div>
+                <div class="numberField">
+                  <mat-form-field class="numberInput">
+                    <input required matInput min="0" type="number" formControlName="secondFieldTimeMonths">
+                  </mat-form-field>
+                  <span class="description">Months</span>
+                </div>
+                <div class="numberField">
+                  <mat-form-field class="numberInput">
+                    <input required matInput min="0" type="number" formControlName="secondFieldTimeYears">
+                  </mat-form-field>
+                  <span class="description">Years</span>
+                </div>
+            <div class="dateSettings">
+              <mat-radio-group class="radioGroup" formControlName="secondFieldTimeExecutionTime">
+                <mat-radio-button [value]="executionTime.BEFORE">Before</mat-radio-button>
+                <mat-radio-button [value]="executionTime.EXACTLY_AT">Exactly at</mat-radio-button>
+                <mat-radio-button [value]="executionTime.AFTER">After</mat-radio-button>
+              </mat-radio-group>
+              <mat-divider [vertical]="true" class="divider"></mat-divider>
+              <mat-radio-group class="radioGroup" formControlName="secondFieldTimeDateType">
+                <mat-radio-button [value]="dateType.EXECUTION_DATE">Execution date</mat-radio-button>
+                <mat-radio-button [value]="dateType.CUSTOM_DATE">Custom date</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div class="datePicker">
+              <mat-form-field  *ngIf="datePickerEnabled">
+                <mat-label>Choose a date</mat-label>
+                <input *ngIf="datePickerEnabled" matInput  [matDatepicker]="picker" formControlName="secondFieldTimeDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        </ng-template>
+      </mat-expansion-panel>
+    </mat-card>
+  </div>
+</form>

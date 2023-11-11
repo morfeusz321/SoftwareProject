@@ -1,0 +1,9 @@
+<mat-sidenav-container (backdropClick)="handleBackdropClick()">
+  <mat-sidenav [(opened)]="opened" [disableClose]="changesWarning" (closed)='deselectNode()' mode="over" position="end">
+    <app-form-drop-list></app-form-drop-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-graph-builder *ngIf="!newGraph && (isLoading$ | async) === false"></app-graph-builder>
+        <app-new-graph-input *ngIf="newGraph"></app-new-graph-input>
+  </mat-sidenav-content>
+</mat-sidenav-container>

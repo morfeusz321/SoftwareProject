@@ -1,0 +1,24 @@
+@import "src/app/variables";
+
+.argument {
+  display: flex;
+  height: 300px;
+  align-items: center;
+}
+
+.arguments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.remove-argument {
+  margin-bottom: 15px;
+}
+
+.argument-card {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 5px 5px rgba(107,104,107, 0.2);
+  height: 86%
+}

@@ -1,0 +1,16 @@
+<form [formGroup]="emailForm">
+  <div style="display: flex; flex-direction: column" class ="email">
+    <mat-form-field appearance="fill">
+      <mat-label>{{'nodeEditor.emailForm.parentId' | transloco}}</mat-label>
+      <mat-select required formControlName="parentId" (click)="filterNodes()" [compareWith]="compareNodes">
+        <mat-option *ngFor="let node of nodesWithoutSelectedNode" [value]="node.id" (mouseenter)="highlightNode(node.id)" (mouseleave)="clearHighlighted()">
+          {{node.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{'nodeEditor.emailForm.field' | transloco}}</mat-label>
+      <input required matInput formControlName="field">
+    </mat-form-field>
+  </div>
+</form>

@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary-palette: map.get($color-config, 'primary');
+
+  .mdc-button--raised {
+    & .mat-primary {
+      //todo: figure out a way to override material button
+    }
+  }
+
+  .mdc-button:active,
+  .mdc-button:hover {
+    outline: 0;
+  }
+
+  .mdc-button span {
+
+  }
+
+  .mdc-button:hover span {
+    background: none;
+  }
+
+}
+
+@mixin typography($theme) {
+  $typography-config: mat.get-typography-config($theme);
+
+  .mdc-button {
+    font-family: mat.font-family($typography-config);
+  }
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+
+  $typography-config: mat.get-typography-config($theme);
+  @if $typography-config != null {
+    @include typography($theme);
+  }
+}

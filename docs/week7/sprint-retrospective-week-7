@@ -1,0 +1,25 @@
+Sprint Retrospective 9.06
+
+1. Review sprint details:
+    - Sprint goals:
+        - Finish off the should haves
+        - Apply changes from usability testing
+    - Key deliverables:
+        - More usable interface,
+        - Support for custom nodes on the backend.
+2. Insights and observations:
+    - What went well during the sprint?
+        - We have incorporated many small changes, that greatly improve the value of our application.
+    - What didn't go well?
+        - Because we weren’t in the office, we didn’t merge on a regular basis.
+        - Because of some flights we lost a couple of working days, but will make up for it in the following sprint
+    - Any issues or obstacles faced?
+        - Piotr - I spend a lot of time fixing css.
+        - Liam - Same, css is cursed
+        - Jack - I was very distracted last week ;(
+        - Filip - Couldn’t get the invite to work, but eventually managed.
+        - Rafał - Had some problems with unexpected PHP behaviour. Additional fields were added to requests. “__isCloning”
+3. Improvement areas:
+    - Communication and frequency of reviewing mrs.
+4. Action items:
+    - Make sure to review mrs at least once a day.

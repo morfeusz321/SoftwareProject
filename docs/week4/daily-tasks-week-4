@@ -1,0 +1,57 @@
+## Week 4:
+
+## 15.05 - Monday
+
+Meeting with TA,
+
+Designing your product assignment,
+
+Contacted coach.
+
+Distributed and created issues
+
+## 16.05 - Tuesday
+
+Jack - Finished up basic graph execution (GET/POST/PUT nodes only)
+
+Rafal - Started the issue connected to edges creation and cycle detection
+
+Liam - Made the graph area scrollable
+
+Filip - Testing controllers and services created for graph entity.
+
+## 17.05 - Wednesday
+
+Jack - Start work on graph execution with If conditions, discussed how this should be implemented (and vs or if-condition semantics, should if’s allow multiple children, etc)
+
+Rafal - Finished up edge creation and cycle detection
+
+Liam - tried to help out Rafal with edge bugs and was struggling starting the backend server
+
+Filip - Testing controllers and services created for graph entity.
+
+## 18.05 Thursday
+
+Jack - Continued execution with if-condition nodes, effectively got it finished + wrote some basic tests.
+
+Rafal - integrated Insocial API into our application, made some progress with Invite requests.
+
+Liam - started frontend to backend integration.
+
+Filip - Started integrating backend with fronted and fixing found differences between data on the both ends.
+
+## 19.05 - Friday
+
+Piotr - Condition node form, Error messages system, Bugs and improvements on frontend for presentation
+Jack - Helped with front-end back-end integration (discussing some small discrepancies between our objects and fields on front compared to back)
+Filip - Performing manual testing of the integrated app. Working with documentation bundle to show schemas based on the entities in our app.
+Rafał -  Helped with front-end back-end integration, finished parsing Invite node as a POST node, some minor changes regarding discrepancies between naming.
+Liam -  Continued frontend backend integration with the help of others
+
+## 19.05 - Friday
+
+1. Merge develop to main
+2. Make sure definition of done is improved for the issues
+3. Close the milestone
+4. Meeting with client
+5. Sprint retrospective

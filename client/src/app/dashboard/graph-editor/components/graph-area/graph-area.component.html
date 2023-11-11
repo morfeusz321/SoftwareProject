@@ -1,0 +1,31 @@
+<div class="graph-area-scroll">
+  <div #graphDiv class="graph-area">
+    <!--for each node sets the id, x and y in absolute position relating to the graph area
+    and makes it draggable within the graph boundary-->
+    <app-basic-node
+      *ngFor="let node of nodes$ | async"
+      [style.left.px]="node.position.positionX"
+      [style.top.px]="node.position.positionY"
+      [node]="node"
+      (cdkDragReleased)="updatePos(node.id)"
+      (cdkDragStarted)="triggerDrag(node)"
+      [id]="node.id"
+      (selectNode)="selectNodeToConnect(node.id, node.type === triggerNodeType)"
+      [selectedAsSource]="node.id === selectedSourceNode"
+      [highlighted]="node.id === (highlightedNode$ | async)"
+      cdkDrag
+      cdkDragBoundary=".graph-area"
+      (deleteNode)="deleteNode(node.id)"
+      (editNode)="selectNode(node.id)"
+    >
+    </app-basic-node>
+
+    <app-basic-node
+      *ngIf="drag && lastNode"
+      [style.left.px]="lastNode.position.positionX"
+      [style.top.px]="lastNode.position.positionY"
+      [shadowNode]="true"
+    >
+    </app-basic-node>
+  </div>
+</div>

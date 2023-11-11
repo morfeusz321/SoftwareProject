@@ -1,0 +1,63 @@
+@import "src/app/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  app-side-menu {
+    display: flex;
+    height: calc(100% - 64px);
+    min-width: 200px;
+  }
+
+  .right-elements {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  mat-toolbar-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  mat-toolbar {
+    position: relative;
+    z-index: 998;
+    box-shadow: 0 5px 10px 0 rgba(107, 104, 107, 0.5);
+  }
+
+  mat-icon {
+    color: white;
+  }
+
+  .high-contrast {
+    color: white;
+  }
+
+  mat-button-toggle-group {
+    border-style: none;
+    margin-left: 10px;
+    height: 40px;
+
+    mat-button-toggle {
+      font-size: 12px;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      align-content: space-evenly;
+    }
+  }
+
+  span {
+    color: white;
+  }
+
+  .logo {
+    width: 100px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,102 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+  $warn: map.get($color-config, 'warn');
+
+  .basic-node {
+    &--post {
+      .node-container {
+        .mat-badge-content {
+          background-color: mat.get-color-from-palette($primary, Y400);
+        }
+      }
+    }
+
+    &--put {
+      .node-container {
+        .mat-badge-content {
+          background-color: mat.get-color-from-palette($primary, B400);
+        }
+      }
+    }
+
+    &--get {
+      .node-container {
+        .mat-badge-content {
+          background-color: mat.get-color-from-palette($primary, G400);
+        }
+      }
+    }
+
+    &--trigger {
+      .node-container {
+        .mat-badge-content {
+          background-color: mat.get-color-from-palette($primary, P400);
+        }
+      }
+    }
+
+    &--if {
+      .node-container {
+        .mat-badge-content {
+          background-color: mat.get-color-from-palette($primary, GR400);
+        }
+      }
+    }
+
+    &--filter {
+      .node-container {
+        .mat-badge-content {
+          background-color: mat.get-color-from-palette($primary, R400);
+        }
+      }
+    }
+
+    &--map {
+      .node-container {
+        .mat-badge-content {
+          background-color: mat.get-color-from-palette($primary, BR400);
+        }
+      }
+    }
+
+    &--invite {
+      .node-container {
+        .mat-badge-content {
+          $first-gradient-color: mat.get-color-from-palette($primary, GRADPR1);
+          $second-gradient-color: mat.get-color-from-palette($primary, GRADPR2);
+          @if $first-gradient-color != null {
+            background: linear-gradient(90deg, $first-gradient-color 2.72%, $second-gradient-color 99.93%);
+          } @else {
+            background: mat.get-color-from-palette($warn, 400);
+          }
+        }
+      }
+    }
+
+    &--shadow {
+      opacity: 50% !important;
+      z-index: 996 !important;
+      background-color: mat.get-color-from-palette($primary, GR400) !important;
+    }
+
+    &--selected {
+      border-style: solid;
+      border-width: 2px;
+      border-color: mat.get-color-from-palette($accent, 400);
+    }
+  }
+}
+
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+}
+

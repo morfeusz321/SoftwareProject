@@ -1,0 +1,269 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "app/styles/button/_button-theme" as button-theme;
+@use 'app/styles/sidenav/_sidenav-theme' as sidenav;
+@use 'app/styles/toolbar/_toolbar-theme' as toolbar;
+@use 'app/styles/menu-node/_menu-node-theme' as menu-node;
+@use 'app/styles/basic-node/_basic-node-theme' as basic-node;
+@import "app/variables";
+@import "app/styles/button/button";
+
+
+@include mat.core();
+
+$primary-accessible-palette: (
+  50 : #e0f8f7,
+  100 : #b3efec,
+  200 : #80e4df,
+  300 : #4dd9d2,
+  400 : #26d0c9,
+  500 : #00c8bf,
+  600 : #00c2b9,
+  700 : #00bbb1,
+  800 : #00b4a9,
+  900 : #00a79b,
+  A100 : #d1fffb,
+  A200 : #9efff7,
+  A400 : #6bfff3,
+  A700 : #52fff1,
+  R400 : #4c7df5,
+  BR400 : #4c7df5,
+  Y400 : #00a79b,
+  G400 : #00a79b,
+  B400 : #00a79b,
+  P400 : #4c7df5,
+  GR400 : #4c7df5,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$secondary-accessible-palette: (
+  50 : #e6edfe,
+  100 : #c0d1fb,
+  200 : #96b3f9,
+  300 : #6b94f7,
+  400 : #4c7df5,
+  500 : #2c66f3,
+  600 : #275ef1,
+  700 : #2153ef,
+  800 : #1b49ed,
+  900 : #1038ea,
+  A100 : #ffffff,
+  A200 : #e4e8ff,
+  A400 : #b1bcff,
+  A700 : #97a7ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$warn-accessible-palette: (
+  50 : #f3e6fb,
+  100 : #e2c1f6,
+  200 : #cf98f0,
+  300 : #bb6eea,
+  400 : #ad4fe6,
+  500 : #9e30e1,
+  600 : #962bdd,
+  700 : #8c24d9,
+  800 : #821ed5,
+  900 : #7013cd,
+  A100 : #fefcff,
+  A200 : #e2c9ff,
+  A400 : #c796ff,
+  A700 : #ba7dff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$primary-palette: (
+  50: #eeeff0,
+  100: #d2d9dc,
+  200: #b4c0c6,
+  300: #95a7b0,
+  400: #7e939e,
+  500: #66818d,
+  600: #5a727c,
+  700: #4b5d66,
+  800: #3c4a51,
+  900: #2b353a,
+  R400: $color-red,
+  Y400: $color-yellow,
+  G400: $color-green,
+  B400: $color-blue,
+  P400: $color-purple,
+  GR400: $color-grey,
+  BR400: $color-brown,
+  GRADPR1: #FFDDE5,
+  GRADPR2: #D7F2FE,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+  )
+);
+
+$secondary-palette: (
+  50: #e3f5fd,
+  100: #b8e5f9,
+  200: #8dd4f4,
+  300: #68c3ef,
+  400: #54b6eb,
+  500: #4aa9e7,
+  600: #459cd8,
+  700: #3e89c4,
+  800: #3978b0,
+  900: #2b588e,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+  )
+);
+
+$warn-palette: (
+  50: #f7e7e5,
+  100: #f5c7b7,
+  200: #eea28a,
+  300: #e87f5c,
+  400: #e4643a,
+  500: #e14a15,
+  600: #d74412,
+  700: #ca3e0d,
+  800: #bc3709,
+  900: #a42a02,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+  )
+);
+
+
+$my-app-primary: mat.define-palette($primary-palette, 900);
+$my-app-accent: mat.define-palette($secondary-palette, 400);
+$my-app-warn: mat.define-palette($warn-palette, 300);
+
+$my-app-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $my-app-primary,
+        accent: $my-app-accent,
+        warn: $my-app-warn,
+      ),
+    )
+);
+
+@include mat.all-component-themes($my-app-theme);
+
+//custom components theme
+@include sidenav.theme($my-app-theme);
+@include toolbar.theme($my-app-theme);
+@include menu-node.theme($my-app-theme);
+@include basic-node.theme($my-app-theme);
+
+
+//The color pairings follow WCAG 2.1 AA based on a contrast ratio of 4.5:1.
+.accessible-theme {
+  $accessible-primary: mat.define-palette($primary-accessible-palette, 900);
+  $accessible-secondary:  mat.define-palette($secondary-accessible-palette, 400);
+  $accessible-warn:    mat.define-palette($warn-accessible-palette);
+  $accessible-theme: mat.define-light-theme(
+      (
+        color: (
+          primary: $accessible-primary,
+          accent: $accessible-secondary,
+          warn: $accessible-warn,
+        ),
+      )
+    );
+
+  @include mat.all-component-themes($accessible-theme);
+  //custom components theme
+  @include sidenav.theme($accessible-theme);
+  @include toolbar.theme($accessible-theme);
+  @include menu-node.theme($accessible-theme);
+  @include basic-node.theme($accessible-theme);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+svg {
+  z-index: 100;
+}
+
+#toast-container > .toast-success {
+  background-color: $color-green;
+  color: white;
+}
+#toast-container > .toast-error {
+  background-color: $color-red;
+  color: white;
+}
+
+#toast-container > .toast-info {
+  background-color: $color-blue;
+  color: white;
+}

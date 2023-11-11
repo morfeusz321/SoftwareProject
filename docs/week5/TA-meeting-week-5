@@ -1,0 +1,100 @@
+# Week 5 - Presentation and progress so far
+
+1. Midterm presentation
+2. How we are doing
+3. Sprint retrospective
+4. We have improved on the following:
+    - [x]  Improved code reviews
+    - [x]  Meeting notes were improved
+    - [x]  We have added documentation
+    - [x]  Management of issues and closing milestone
+    - [x]  Made sure pipelines are not failing
+    - [x]  Definition of done for the issue
+
+Questions:
+
+1. How to improve comments?
+2. How to improve agendas?
+3. What to focus on during final presentation
+
+1. Question: what can we comment more on GitLab? how can we still improve this? especially: what to do when we have an MR which is small, so it’s hard to give a useful comment
+
+- regardless, make the comments substantial
+- don’t make MR’s for something trivial, e.g. adding docs or a small bug fix.
+    - but also: we want to have everything as an issue to document who did what
+- maybe communicate more on GitLab a bit vs communicating in person
+
+merge request checklist: we have checkboxes, but it’s not a list of “do all of these”, but more “what will the affect of this MR be”
+
+- potentially instead of the checklist, have some extra information in this
+- incorporate this at least from now on
+- example checklist where you do everything before merging: tests, right branch, read through code, checkstyle, issue connected
+
+a good idea: we comment on the draft MR as we are working on it, so that the things we say in person are documented as suggested improvements.
+
+agenda feedback: current we ask: what we’ve done, how we’ve incorporated feedback, but it’s narrow. how can we make it better?
+
+- include something like “the main objective of the meeting”, try to make it more concrete why we’re having the meeting
+- potentially a section on reflection on previous feedback
+- potentially discussion of ethics
+- or even just discussion between us, but with the TA present
+- asking for advice on assignments
+- meeting summary
+- feedback with tips and tops
+
+we try to solve our problems internally, without consulting the TA or coach if unnecessary. but for us: we could discuss things more, e.g. if we encounter some problem suddenly. also mention: delays, new approaches, how we prepare for presentations.
+
+to discuss next week: reflections on buddy check (+ related reflection assignment, but that’s week 8?)
+
+- so these can be action points
+
+good that pipeline passing percentage
+
+the demo
+
+- for the endterm make sure to do a live demo
+- the video was good, good that we managed to keep up with the pace of the video to say what
+- we could have a video demo prepared as a backup, and potentially precompute some things
+- we ran a bit long (above 20 minutes), the final presentation should be shorter. aim for 20 minutes presentation then Q&A
+
+for final presentation:
+
+- still include the process, things like requirement ellicitation
+- similar to what we’ve done today
+- on software quality, demonstrate what we’ve done, our tests and documentation and so on
+
+usability
+
+- task for week 5 is finishing up the UI
+- but it’s fine if some things are not implemented when we start doing user tests
+- potentially just show some friends, locally on the computer. also a good idea to show the people at insocial who will be using it most probably. also there’s a UX intern at insocial, would be useful to get feedback from her
+- very critical HCI perspective
+    - will we have consent forms?
+    - just feedback forms or have one person watching and taking notes
+    - consider HREC consent template
+    - research this, decide on the task we give the person, how are we going to measure their
+    - number of missclicks, how long things takes them, measure these things
+    - make sure to ask for some HCI resources
+    - should be fine to start in week 6
+    - make sure we get the target audience
+    - try to get a lot of people, see both how technical and non-technical people find the application
+    - inclusivity analysis
+        - usability for color-blind users
+        - the invite node is not very visible, light background
+        - more viisble highlighting of what was selected
+        - there’s a lot of things to consider, there’s almost certainly things that are unclear that we are not noticing
+    - Close branches
+
+project folder layout
+
+- a bit convoluted
+- but this is mostly a function of us using frameworks heavy on autogeneration and boilerplate
+
+when adding README explain the directory stucture
+
+Most important action points:
+
+1. Improve the gitlab even more
+2. Work on documentation
+3. Work on testing
+4. Delete branches

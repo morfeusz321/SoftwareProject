@@ -1,0 +1,20 @@
+{
+  "action": {
+    "request": {
+      "body": "",
+      "url": "https://jsonplaceholder.typicode.com/todos/2",
+      "auth": null,
+      "method": "GET"
+    },
+    "arguments": [],
+    "neighbours": [],
+    "id": "175f9f0f-7f53-4366-b785-8b493e48d42d",
+    "type": "GET",
+    "position": {
+      "positionX": 0,
+      "positionY": 0,
+      "positionZ": 0
+    }
+  },
+  "label": "Example Custom Node from Postman"
+}

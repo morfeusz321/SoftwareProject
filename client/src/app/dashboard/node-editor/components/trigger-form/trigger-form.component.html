@@ -1,0 +1,36 @@
+<form [formGroup]="triggerForm">
+  <div style="display: flex; flex-direction: column">
+    <mat-form-field appearance="fill">
+      <mat-label>{{this.scheduleFormText + 'intervalType' | transloco}}</mat-label>
+      <mat-select required formControlName="interval">
+        <mat-option *ngFor="let type of intervalTypes" [value]="type">
+          {{type}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field *ngIf="triggerForm.controls['interval'].value === intervalTypesEnum.WEEKLY" appearance="fill">
+      <mat-label>{{this.scheduleFormText + 'weekday' | transloco}}</mat-label>
+      <mat-select required multiple formControlName="repeatOn">
+        <mat-option *ngFor="let day of weekDays" [value]="day">
+          {{daysLabels[day]}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{this.scheduleFormText + 'repetitionTime' | transloco}}</mat-label>
+      <mat-select required formControlName="time">
+        <mat-option *ngFor="let time of timeOfDayOptions" [value]="time">
+          {{timeLabels[time]}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field *ngIf="triggerForm.controls['interval'].value === intervalTypesEnum.MONTHLY" appearance="fill">
+      <mat-label>{{this.scheduleFormText + 'dayOfTheMonth' | transloco}}</mat-label>
+      <mat-select required formControlName="monthRepeat">
+        <mat-option *ngFor="let option of monthRepeatOptions" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>

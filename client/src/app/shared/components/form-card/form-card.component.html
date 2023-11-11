@@ -1,0 +1,9 @@
+<mat-expansion-panel [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title class="title">
+      {{headers + type | transloco}}
+      <mat-icon matTooltip="{{headers + type + 'Info' | transloco}}">info</mat-icon>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <ng-content></ng-content>
+</mat-expansion-panel>

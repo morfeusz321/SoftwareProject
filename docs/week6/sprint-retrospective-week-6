@@ -1,0 +1,27 @@
+Sprint Retrospective 2.06.2023
+
+1. Review sprint details:
+    - Sprint goals:
+        - Test the application thoroughly both on software side as well as user tests.
+    - Key deliverables:
+        - Software tests,
+        - Feedback on what to improve in our application in order to make it more usable.
+2. Insights and observations:
+    - What went well during the sprint?
+        - Despite lack of experience we have managed to set up usability tests.
+        - We have greatly improved our test coverage.
+    - What didn't go well?
+        - During this week, our spirit has dipped, probably because testing is not the most engaging of activities.
+    - Any issues or obstacles faced?
+        - Piotr - I wasn’t very specific with the exact tasks that I was performing this week, I feel that I could have accomplished more, If my work was more structured.
+        - Rafał - Filip and I were trying to fully implement the ‘invite’ node but because of outside factors such as non functional development environments on our client side we were forced to postpone our efforts and as a result we didn’t manage to fully finish the implementation.
+        - Laimonas - Got a bit stuck on tests, but eventually overcame.
+        - Filip - We faced many problems due to the lack of possibility to connect our app to clients’ API. Everything was caused by the unexpected loss of data on the client side.
+        - Jack - Had a busy week with non-SP stuff, mostly just wrote some tests for backend. Merge conflicts at the end of the sprint were worse than usual but manageable.
+3. Improvement areas:
+    - Make sure to keep up the spirit until the end of the project. We are doing great job and it would be a shame if we slacked off with the quality of our work.
+    - Account for unexpected delays. Up to this point we were ahead of schedule but right now we don’t have much time to spare.
+    - Try to make our tasks more separated from our client's functionality.
+4. Action items:
+    - Keep up engagement and good communication within the team.
+    - Keep high coverage on both frontend and backend.

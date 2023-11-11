@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+
+  .menu-trigger-button:hover {
+    background: rgba(mat.get-color-from-palette($accent, 400), 0.2);
+  }
+
+  mat-button-toggle-group {
+    .mat-button-toggle-checked {
+      background-color: mat.get-color-from-palette($accent, 400);
+    }
+  }
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+}
+

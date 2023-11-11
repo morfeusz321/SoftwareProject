@@ -1,0 +1,7 @@
+<form [formGroup]="nameForm "style="height: 100%; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center">
+    <mat-form-field appearance="fill">
+      <mat-label>Graph name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <button mat-button (click)="createGraph()">Create</button>
+</form>

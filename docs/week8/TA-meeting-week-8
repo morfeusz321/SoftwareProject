@@ -1,0 +1,38 @@
+1. Daily Tasks - [Daily Tasks](https://www.notion.so/Daily-Tasks-3f923b442836413c9edd730df3d02b14?pvs=21) 
+2. Sprint retrospective - [Week 7](https://www.notion.so/Week-7-0a949442448b4862844a9f537f7c01d5?pvs=21) 
+
+Implemented improvements:
+
+- Redesign for trigger node:
+    - added by default
+    - info for edges
+- Redesign for condition node - now it has visual explanation on how to fill it in.
+- Execution from builder.
+- Info about how to handle nodes and edges.
+- Additional information all over the app.
+
+Let’s go through the rubric once again and discuss what we should focus on during the last two weeks of the project.
+
+## Notes
+
+From us:
+
+- what we’ve done to implement the feedback from our user tests
+    - documented in our issues. things like: hover for information, renamed nodes, start node not deletable, more information, easier execution, things about removing
+- what we’ve been doing
+    - demo of functionality
+- what can we do to finish our project up in the best way possible?
+    - especially going through the
+
+Feedback:
+
+- we should have a section on software quality in the report, mention things like code coverage, why we decided on 70%, what kinds of tests we have
+    - different quality assurance methods: types of tests, code assessment tools like lints, practices on GitLab
+- initiative and creativity
+- do we have to add something about collaboration to the report? not really, thats mostly graded by GitLab
+- demo preferably live, will be during the presentation (20 minutes, then 40 min Q&A)
+- add a section about usability to the report
+- write more comments for methods, make the style consistent
+- cleanup the issues to not have weights
+- presentation on Monday in week 10
+- it’s ok to have jokes during the presentation, just make sure it’s still professional and covers everything

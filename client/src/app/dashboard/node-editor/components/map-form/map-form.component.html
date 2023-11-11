@@ -1,0 +1,21 @@
+<form [formGroup]="mapForm">
+  <div style="display: flex; flex-direction: column">
+        <mat-form-field appearance="fill">
+          <mat-label>Name of the field to change</mat-label>
+          <input required matInput formControlName="fieldName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a node that returns the field:</mat-label>
+          <mat-select required formControlName="parentNodeId" (click)="filterNodes()">
+            <mat-option *ngFor="let node of nodesWithoutSelectedNode" [value]="node.id" (mouseenter)="highlightNode(node.id)" (mouseleave)="clearHighlighted()">
+              {{node.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Name to change the field to:</mat-label>
+          <input required matInput formControlName="mappedFieldName">
+        </mat-form-field>
+  </div>
+  <!--{{this.argForm.value | json}} -->
+</form>

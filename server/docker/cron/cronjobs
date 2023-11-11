@@ -1,0 +1,2 @@
+*/15 * * * * /usr/local/bin/php /app/bin/console app:delete-graph-logs >> /var/log/cron.log 2>&1
+*/15 * * * * /usr/local/bin/php /app/bin/console executeScheduledGraphs >> /var/log/cron.log 2>&1

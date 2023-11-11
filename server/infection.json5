@@ -1,0 +1,21 @@
+{
+    "$schema": "vendor/infection/infection/resources/schema.json",
+    "source": {
+        "directories": [
+            "src"
+        ],
+        excludes: [
+            "DataFixtures",
+            "Command/Admin"
+        ]
+    },
+    "logs": {
+        "text": "infection.log",
+        "html": "infection.html"
+    },
+    "mutators": {
+        "@default": true,
+        "@function_signature": false,
+        "@number": false,
+    }
+}

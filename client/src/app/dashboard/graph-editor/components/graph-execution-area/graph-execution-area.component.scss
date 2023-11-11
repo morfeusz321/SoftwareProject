@@ -1,0 +1,26 @@
+@import 'src/app/variables';
+
+mat-expansion-panel ::ng-deep {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+
+  .execution-button-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      margin: 0 10px;
+    }
+  }
+
+  .mat-expansion-panel-content {
+    flex-grow: 1;
+
+    .mat-expansion-panel-body {
+      padding: 0;
+      height: 100%;
+    }
+  }
+}

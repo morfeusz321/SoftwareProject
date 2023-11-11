@@ -1,0 +1,26 @@
+
+Week 4
+Sprint Retrospective 19.05
+Review sprint details:
+Sprint goals: Core functionality of the application - connecting frontend and backend
+Key deliverables: Frontend and backend are connected
+Insights and observations:
+What went well during the sprint?
+We got a lot done. We were able to finally perform execution of the graph.
+We were efficient at communicating when we had misunderstandings about how thing should be implemented.
+We’ve improved our process for code reviews and comments. We’ve also improved our issues, making our definitions of done more specific and separate from what functionality should be implemented.
+What didn't go well?
+Tasks were related to each other so we had more merge conflicts and problems with efficiently working in parallel than previously (but being in person helped with this a lot).
+Member Specific:
+Piotr - I encountered a bug that was a result of lack of understanding of particular tool, IO tried to use it without fully going through it.
+Filip P - Not much, for me this was the smoothest sprint so far. Knew what I had to do and got it implemented in a reasonable amount of time.
+Filip B - When connecting the frontend with the backend there were differences in the way we represent some variables (like frontend was using camelcase when backend was using capital letters and etc).
+Rafał - I was stuck for a long time with the leader-line library and wasted a lot of time trying to figure out what was the issue with the edges not displaying. We also had some naming differences FE/BE, probably lacking some communication regarding naming.
+Any issues or obstacles faced?
+Naming convention was not decided - some issues with British English and American English
+Improvement areas:
+Make sure to discuss all of the conventions upfront.
+Issue distribution
+Action items:
+Think about how do the issues relate to each other.
+Agree on naming convention

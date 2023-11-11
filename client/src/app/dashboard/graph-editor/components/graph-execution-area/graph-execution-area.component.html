@@ -1,0 +1,16 @@
+<mat-expansion-panel [(expanded)]="expanded" (click)="expansionClicked()">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{ 'execute.title' | transloco }}
+      <div class="execution-button-container">
+        <button mat-raised-button (click)="clearLogs($event)" color="warn" *ngIf="expanded">
+          {{ 'execute.clear-logs' | transloco }}
+        </button>
+        <button mat-raised-button (click)="executeGraph($event)" color="primary">
+          {{ 'graphBuilder.execute' | transloco }}
+        </button>
+      </div>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <app-graph-execution-logs [graphListVisible]="false" [selectedGraph]="selectedGraph"></app-graph-execution-logs>
+</mat-expansion-panel>

@@ -1,0 +1,26 @@
+/* COLORS */
+
+$primary-color: #2B353A;
+$secondary-color: #54B5EB;
+$color-blue: #3ca5e3;
+$color-grey: #7b7b80;
+$color-red: #E8805C;
+$color-brown: #d07653;
+$color-green: #47c69b;
+$color-yellow: #F2B518;
+$color-purple: #A77DC2;
+$gradient-primary: linear-gradient(90deg, #FFDDE5 2.72%, #D7F2FE 99.93%);
+$gradient-secondary:linear-gradient(90deg, #F07392 0%, #79C7E9 100%);
+
+/* FONTS */
+
+/* BORDER */
+
+$border-radius: 8px;
+$border-style: solid;
+$border-width: 1px;
+$border-color: #ccc;
+$border-complete: $border-width $border-style $border-color;
+
+$small-size-button: 24px;
+$small-size-icon: 18px;

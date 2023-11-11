@@ -1,0 +1,49 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "_comment": "To see the guide for more information visit: https://stryker-mutator.io/docs/stryker-js/guides/angular",
+  "mutate": [
+    "src/app/**/*.ts",
+    "!src/app/**/*.spec.ts",
+    "!src/app/**/*.module.ts"
+  ],
+  "mutate_comment": "The globbing expression matches all TypeScript files in the src/app folder, except for spec and module files, you can specify them above",
+  "testRunner": "karma",
+  "karma": {
+    "configFile": "karma.conf.js",
+    "projectType": "angular-cli",
+    "config": {
+      "browsers": [
+        "ChromeHeadlessCI"
+      ]
+    }
+  },
+  "checkers": ["typescript"],
+  "tsconfigFile": "tsconfig.json",
+  "typescriptChecker": {
+    "prioritizePerformanceOverAccuracy": true
+  },
+  "reporters": [
+    "progress",
+    "clear-text",
+    "html"
+  ],
+  "concurrency": 8,
+  "commandRunner": {
+    "command": "npm run test:ci"
+  },
+  "concurrency_comment": "Recommended to use about half of your available cores when running stryker with angular",
+  "coverageAnalysis": "perTest",
+  "disableTypeChecks": "{test,src,lib}/**/*.{js,ts,jsx,tsx,html,vue}",
+  "all_mutator_comment": {
+    "comment": "this is the list of all mutations, if you want to disable some specify them in mutator.excludedMutations",
+    "possibleMutations": ["ArithmeticOperator", "ArrayDeclaration", "BlockStatement", "BooleanLiteral", "ConditionalExpression", "EqualityOperator", "LogicalOperator", "MethodExpression", "ObjectLiteral", "Regex", "StringLiteral", "UnaryOperator", "UpdateOperator"]
+  },
+  "mutator": {
+    "excludedMutations": ["StringLiteral", "ArrowFunction"]
+  },
+  "htmlReporter": {
+    "fileName": "coverage/mutation.html"
+  },
+  "logLevel": "debug",
+  "_logLevel_comment": "Possible values: fatal, error, warn, info, debug, trace, off; with trace you can see all karma info, changing the level can speed up the process"
+}

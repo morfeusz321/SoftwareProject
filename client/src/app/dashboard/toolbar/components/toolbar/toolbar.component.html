@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="left-elements">
+      <button class="menu-trigger-button" mat-icon-button (click)="toggleMenu()"><mat-icon>menu</mat-icon></button>
+      <img class="logo" alt="Logo" src='../../../../../assets/images/insocial-logo.svg' />
+    </div>
+    <div class="right-elements">
+      <button mat-icon-button><mat-icon>account_circle</mat-icon></button>
+      <mat-slide-toggle [checked]="isAccessibleMode | async" (change)="toggleAccessibleMode($event.checked)"></mat-slide-toggle>
+      <p class="high-contrast">{{'toolbar.contrast' | transloco}}</p>
+      <mat-button-toggle-group>
+        <mat-button-toggle
+          *ngFor="let language of languages"
+          (click)="changeLang(language)"
+          [checked]="language === currentLanguage"
+        >
+          {{language | uppercase}}
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+      <button mat-icon-button><mat-icon>more_vert</mat-icon></button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<app-side-menu></app-side-menu>

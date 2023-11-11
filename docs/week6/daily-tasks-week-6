@@ -1,0 +1,63 @@
+# Week 6
+
+## 29.05 - Monday
+
+Holiday - minor tasks
+Piotr - rename and delete graph functionality
+
+Rafal - End to end testing
+
+Filip - Creating scheduled graph execution
+
+Liam - Testing the node editor
+
+## 30.05 - Tuesday
+
+Jack - Started writing tests for graph execution service
+
+Rafał - Testing Graph editor
+
+Liam - Finished testing the node editor and started testing graph overview
+
+Filip - Set up of cron container for docker
+
+Piotr - Rename and delete graph
+
+## 31.05 - Wednesday
+
+Jack - Finished up tests for graph execution service
+
+Rafal - Testing graph editor
+
+Liam - “Finished” testing graph overview
+
+Filip - Integration of XDebug to docker container
+
+Piotr - Rename and delete + set up for usability testing
+
+## 01.06 - Thursday
+
+Jack - Just uni / teamwork stuff
+
+Rafal - Map node and Improving invites and argument bugs
+
+Liam - Bug fixes for user testing
+
+Filip - Testing the repositories
+
+Piotr - Set up usability testing
+
+## 02.06 - Friday
+
+Piotr - Usability tests
+Jack - Resolved a bunch of merge conflicts
+Filip - Integrating mapping node to flow execution
+Rafał -  Some progress on theming
+Liam - Finishing up on bufixes and Graph overview testing after new changes
+
+Team:
+
+1. Merge develop to main
+2. Close the milestone
+3. Meeting with client
+4. Sprint retrospective

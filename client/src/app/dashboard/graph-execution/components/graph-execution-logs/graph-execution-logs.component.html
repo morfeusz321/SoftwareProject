@@ -1,0 +1,59 @@
+<div class="execution-container">
+  <mat-card class="selector-card" *ngIf="graphListVisible">
+    <div class="graph-selector">
+      <mat-form-field appearance="fill" class="graph-form" *ngIf="graphListVisible">
+        <mat-label *ngIf="length === 0">{{ 'execute.no-graphs-saved' | transloco }}</mat-label>
+        <mat-label *ngIf="length > 0">{{ 'execute.select-graph' | transloco }}</mat-label>
+        <mat-select [(ngModel)]="selectedGraph">
+          <mat-option *ngFor="let graph of graphs$ | async" [value]="graph">
+            {{ graph.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="buttons">
+        <button mat-raised-button color="primary" (click)="executeGraph()" [disabled]="!selectedGraph">
+          {{ 'execute.execute-graph' | transloco }}
+        </button>
+        <button mat-raised-button (click)="clearLogs()" color="warn">{{ 'execute.clear-logs' | transloco }}</button>
+        <mat-slide-toggle [(ngModel)]="executingInSandbox">{{ 'execute.sandbox' | transloco }}</mat-slide-toggle>
+      </div>
+    </div>
+  </mat-card>
+  <div class="logs-window">
+    <mat-accordion *ngFor="let execution of executionArray" class="execution-log-container">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Executing flow
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ execution.graphName }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel *ngIf="execution.error">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Encountered error
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="log-info">
+          <code class="log-info__line">{{execution.error}}</code>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel *ngFor="let log of execution.logs">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ log.nodeInfo }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ log.nodeId }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="log-info">
+          <code *ngFor="let evaluation of log.evaluatedTo" class="log-info__line">{{evaluation}}</code>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

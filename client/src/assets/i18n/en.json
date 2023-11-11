@@ -1,0 +1,155 @@
+{
+  "toolbar": {
+    "contrast": "High Contrast"
+  },
+  "sidebar": {
+    "routes": {
+      "graphs": "Saved Flows",
+      "saved-nodes": "Saved Steps",
+      "builder": "New Flow",
+      "execution": "Execution"
+    }
+  },
+  "execute": {
+    "no-graphs-saved": "You don't have any saved flows.",
+    "select-graph": "Select a flow to Execute",
+    "execute-graph": "Execute flow",
+    "clear-logs": "Clear Logs",
+    "title": "Flow execution",
+    "sandbox": "Sandbox"
+  },
+  "graphs": {
+    "edit": "EDIT",
+    "delete": "DELETE",
+    "rename": "RENAME",
+    "disabled": "Disabled",
+    "enabled": "Enabled",
+    "cancel": "CANCEL",
+    "renameTitle": "PROVIDE A NEW NAME FOR THE FLOW",
+    "deleteTitle": "Are you sure you want to delete this flow?"
+  },
+  "graphBuilder": {
+    "save": "Save",
+    "saveAsDraft": "Save as draft",
+    "nodeButtons": {
+      "edit": "Edit step",
+      "delete": "Delete step",
+      "execute": "Execute step"
+    },
+    "execute": "Execute",
+    "schedule": "Scheduled Execution",
+    "schedule-info": "Turning this on will execute the created flow on an interval specified in the START step"
+  },
+  "nodeEditor": {
+    "headers": {
+      "args": "Arguments",
+      "argsInfo": "Here you can declare fields from other steps. To use the argument you can surround the field with <<Example>>, where Example is the new name you specified. To use the entire content of previous step, choose 'wholeBody' as field.",
+      "url": "URL",
+      "urlInfo": "Specify the URL of the endpoint that you send the request to.",
+      "auth": "Authentication",
+      "authInfo": "Specify the authentication method of the request that you want to send.",
+      "body": "Request Body",
+      "bodyInfo": "Specify the body of the request that you want to send. You can also use 'arguments' to use values from other steps.",
+      "condition": "Condition",
+      "conditionInfo": "Here you can compare two values to each other. You can provide a value from another step or fill in your own value.",
+      "trigger": "Schedule Execution",
+      "triggerInfo": "Specify how often the flow should be executed. A flow is only executed if it is also enabled.",
+      "invite": "Invite",
+      "inviteInfo": "Select data to create an invite job with.",
+      "email": "Email",
+      "emailInfo": "Specify which field is the email address of the user you want to invite.",
+      "map": "Change field names",
+      "mapInfo": "Here you can change the names of the fields in data received in previous steps."
+    },
+    "argForm": {
+      "addArgument": "New Argument",
+      "alias": "New Name",
+      "node": "Step",
+      "field": "Field from step"
+    },
+    "authForm": {
+      "authMethod": "Authentication Method"
+    },
+    "emailForm": {
+      "parentId": "Choose second parent step:",
+      "field": "Name of the field in the parent"
+    },
+    "bodyForm": {
+      "endpointBody": "Endpoint Body (if empty, type '{}')"
+    },
+    "urlForm": {
+      "endpointURL": "Endpoint URL"
+    },
+    "conditionForm": {
+      "firstValue": "First Value",
+      "node": "Step",
+      "valueFromNode": "Value from step",
+      "comparisonMethod": "Comparison Method",
+      "secondValue": "Second Value",
+      "userValueInfo": "You can provide your own value to compare against.",
+      "nodeValueInfo": "Specify a step and a field in that step to compare against.",
+      "userValue": "Value",
+      "Equal": "Equal",
+      "LessThan": "Less than",
+      "LessThanOrEqual": "Less than or equal",
+      "NotEqual": "Not equal",
+      "GreaterOrEqual": "Greater than or equal",
+      "GreaterThan": "Greater than",
+      "firstValueInfo": "Here you can specify a step and a value that you want to take from it for comparison.",
+      "secondValueInfo": "Here you can either specify a value from a step or provide your own value.",
+      "calendarInfo": "This condition allows you to check if the date was within specified time interval. For example 'last month', '5 days before specified date', 'more than a week after execution' etc."
+    },
+    "scheduleForm": {
+      "intervalType": "Interval type",
+      "repetitionTime": "Repetition Time",
+      "weekday": "Day of the week",
+      "dayOfTheMonth": "Day of the month"
+    },
+    "saveNode": "Save step",
+    "deleteNode": "Delete step"
+  },
+  "tips": {
+    "addAndDeleteEdge": "Click two steps to connect or disconnect them.",
+    "dragTheNodeToArea": "Drag to the area.",
+    "graphMustStartWithScheduleNode": "Flow must start with start step"
+  },
+  "messages": {
+    "errors": {
+      "error": "Error",
+      "cannotConnectToSchedule": "Cannot connect to the schedule step."
+    },
+    "warnings": {
+      "warning": "Warning",
+      "changes": "Consider saving your newly added changes"
+    },
+    "information": "Step info"
+  },
+  "graphArea": {
+    "GET": "GET",
+    "POST": "POST",
+    "PUT": "PUT",
+    "INVITE": "INVITE",
+    "FILTER": "FILTER",
+    "IF": "IF",
+    "TRIGGER": "START",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "MAP": "MAP",
+    "description": {
+      "GET": "Fetch data",
+      "POST": "Create data",
+      "PUT": "Update data",
+      "INVITE": "Create invite job",
+      "FILTER": "Filter data",
+      "IF": "Create condition",
+      "TRIGGER": "Start",
+      "MAP": "Change field names"
+    },
+    "nodes": {
+      "messages": {
+        "noUrl": "No URL specified",
+        "request-success": "Request sent successfully"
+      }
+    }
+  }
+}
